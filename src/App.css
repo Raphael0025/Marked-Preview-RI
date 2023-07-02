@@ -1,23 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
 body {
   margin: 0;
   padding: 0;
+  height: 100vh;
 }
 
 #root{
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #87b5b5;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: #87b5b5;
 }
 
 .App {
   text-align: center;
+  /* padding: 1rem 19.5rem 1.4rem; */
 }
 
-  #editor, #preview {
-    box-shadow: 0 0 12px 0px #000;
-    min-height: 200px;
+.fa{
+  width: 25px;
+}
+
+#toolbar, #preview, textarea {
+  box-shadow: 1px 1px 10px 0px #000;
+}
+
+#editor{
+  padding: 0 6.17rem;
+}
+
+#toolbar{
+  position: relative; /* Added positioning */
+  border: 1px solid #1d2f2f;
+  background-color: #4aa3a3;
+  font-size: 1rem;
+  font-family: Russo One;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#toolbar button{
+  background-color: none;
+  border: none;
+}
+  #toolbar button:hover{
+    color: red;
   }
 
   textarea{
@@ -25,3 +54,14 @@ body {
     outline: none;
     resize: vertical;
   }
+
+@media screen and (max-width: 420px){
+  #preview{
+    width: 85vw;
+  }
+  #editor{
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
