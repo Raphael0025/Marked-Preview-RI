@@ -7,7 +7,7 @@ function Preview({data}) {
     const convert = md.render(data)
 
     return (
-        <div>
+        <div id='prev'>
             <Toolbar name={"Previewer"} />
             <div id='preview' className='text-start p-3 ' dangerouslySetInnerHTML={{__html: convert}} />
         </div>

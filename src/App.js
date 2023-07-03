@@ -18,10 +18,10 @@ class App extends React.Component {
 
   render(){
     return (
-      <div className="App m-0 col-xl-12 col-xxl-12 col-lg-12 col-md-12 col-sm-12 d-flex flex-column" style={{'row-gap': '1rem'}}>
-          <div className='col-12 justify-content-center' id='editor'>
+      <div id='container' className="App m-0 col-xl-12 col-xxl-12 col-lg-12 col-md-12 col-sm-12 d-flex flex-column" style={{'row-gap': '1rem'}}>
+          <div className='col-12 justify-content-center ' id='editor'>
             <Toolbar name={"Editor"} />
-            <textarea value={this.state.input} onChange={this.handleTextChange} className=' w-100'/>
+            <textarea value={this.state.input} onChange={this.handleTextChange} className='w-100 txtA' id='textA'/>
           </div>
           <Preview data={this.state.input}/>
       </div>
